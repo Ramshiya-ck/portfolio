@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+
+
+.custom-text{
+    font-family: "Alfa Slab One", serif;
+    font-weight: 900;
+   font-style: bold;
+}
