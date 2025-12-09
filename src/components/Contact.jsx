@@ -13,7 +13,7 @@ export const Contact = () => {
   const [showSuccess, setShowSuccess] = useState(false);
 
   const socials = [
-    { icon: <FaLinkedinIn />, label: "LinkedIn", link: "https://linkedin.com" },
+    { icon: <FaLinkedinIn />, label: "LinkedIn", link: "https://www.linkedin.com/in/ramshiya-ck-5805b9358/" },
     { icon: <FaGithub />, label: "GitHub", link: "https://github.com" },
     { icon: <FaTwitter />, label: "Twitter", link: "https://twitter.com" },
     { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/ramshy__abdul/?next=%2F" },
@@ -170,7 +170,7 @@ export const Contact = () => {
                   </a>
                   <div>
                     <p className="text-xs uppercase tracking-[0.35em] text-white/50">Phone</p>
-                    <a href="tel:+918714316363" className="text-base font-semibold hover:text-cyan-400 transition-colors">+91 87143 163601</a>
+                    <a href="tel:+918714316301" className="text-base font-semibold hover:text-cyan-400 transition-colors">+91 87143 16301</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">

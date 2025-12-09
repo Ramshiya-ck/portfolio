@@ -59,8 +59,8 @@ export const Home = () => {
     <>
     <div className='bg-black min-h-screen flex items-center relative overflow-hidden'>
       
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_50%)]'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)] overflow-hidden'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_50%)] overflow-hidden'></div>
         
         <div className='flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 relative z-10 py-12 md:py-0'>
             <div className='flex-1 max-w-2xl md:py-16'>
@@ -139,7 +139,7 @@ export const Home = () => {
             <div className='hidden md:flex flex-1 justify-center items-center mt-10 md:mt-0'>
                 <div className='relative group'>
                     {/* Subtle glow effect */}
-                    <div className='absolute inset-0 rounded-full blur-xl scale-110 group-hover:scale-125 transition-transform duration-700'></div>
+                    <div className='absolute inset-0 rounded-full blur-xl scale-110 group-hover:scale-125 transition-transform duration-700 overflow-hidden'></div>
                     <img 
                         src={img} 
                         className='relative w-64 h-64 md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] object-cover opacity-90 transition-all duration-500' 

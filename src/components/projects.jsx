@@ -90,8 +90,8 @@ export default function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden bg-[#03060b] py-20 px-4 sm:px-6 md:px-8 lg:px-16">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-20 left-1/2 h-[60vh] w-[60vh] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/20 via-indigo-500/5 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-[50vh] w-[40vh] rounded-full bg-gradient-to-br from-purple-500/10 via-fuchsia-500/5 to-transparent blur-3xl" />
+        <div className="absolute -top-20 left-1/2 h-[60vh] w-[60vh] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/20 via-indigo-500/5 to-transparent blur-3xl overflow-hidden" />
+        <div className="absolute bottom-0 right-0 h-[50vh] w-[40vh] rounded-full bg-gradient-to-br from-purple-500/10 via-fuchsia-500/5 to-transparent blur-3xl overflow-hidden" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -110,10 +110,10 @@ export default function Projects() {
           </p>
         </motion.header>
 
-        <div className="relative">
-          <div className="relative h-[300px] sm:h-[360px] md:h-[400px] lg:h-[460px]">
+        <div className="relative overflow-hidden">
+          <div className="relative h-[300px] sm:h-[360px] md:h-[400px] lg:h-[460px] overflow-hidden">
             <div
-              className="absolute inset-0 flex items-center justify-center"
+              className="absolute inset-0 flex items-center justify-center overflow-hidden"
               style={{ perspective: "1600px" }}
             >
               {projectList.map((project, index) => {
