@@ -17,7 +17,7 @@ export const Contact = () => {
     { icon: <FaGithub />, label: "GitHub", link: "https://github.com" },
     { icon: <FaTwitter />, label: "Twitter", link: "https://twitter.com" },
     { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/ramshy__abdul/?next=%2F" },
-    { icon: <FaWhatsapp />, label: "WhatsApp", action: () => window.open('https://wa.me/9187143163601', '_blank'), type: "button" },
+    { icon: <FaWhatsapp />, label: "WhatsApp", action: () => window.open('https://wa.me/87143163601', '_blank'), type: "button" },
   ];
 
   const handleChange = (e) => {
