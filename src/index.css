@@ -1,9 +1,17 @@
 @import "tailwindcss";
 
-
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply overflow-x-hidden;
+  }
+}
 
 .custom-text{
     font-family: "Alfa Slab One", serif;
     font-weight: 900;
-   font-style: bold;
+    font-style: bold;
 }

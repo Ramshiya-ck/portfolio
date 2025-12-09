@@ -57,31 +57,30 @@ export const Home = () => {
 
   return (
     <>
-    <div className='bg-black h-[93vh] flex items-center relative overflow-hidden'>
+    <div className='bg-black min-h-screen flex items-center relative overflow-hidden'>
       
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_50%)]'></div>
         
-        <div className='flex justify-between items-center w-full px-10 relative z-10'>
-            <div className='flex-1 max-w-2xl'>
+        <div className='flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 relative z-10 py-12 md:py-0'>
+            <div className='flex-1 max-w-2xl md:py-16'>
                 {/* Greeting */}
                 <div className='mb-8'>
                     <span className='text-gray-500 text-sm font-light tracking-[0.2em] uppercase'>Welcome to my world</span>
                 </div>
                 
                 {/* Main heading */}
-                <h1 className='text-gray-400 font-light text-4xl lg:text-5xl leading-tight mb-6'>
-                    Hello, I'm <span className='font-Ramshiya text-6xl lg:text-7xl text-white block mt-2'>Ramshiya</span>
+                <h1 className='text-gray-400 font-light text-4xl md:text-5xl lg:text-6xl leading-tight mb-6'>
+                    Hello, I'm <span className='font-Ramshiya text-5xl md:text-6xl lg:text-7xl text-white block mt-2'>Ramshiya</span>
                 </h1>
                 
                 {/* Description */}
-                <p className='text-gray-400 font-light text-lg lg:text-xl leading-relaxed mb-10 max-w-lg'>
+                <p className='text-gray-400 font-light text-lg md:text-xl leading-relaxed mb-10 max-w-lg'>
                     Passionate about coding, design, and innovation — I bring ideas to life through full-stack development, creating digital experiences that stand out.
                 </p>
                 
                 {/* CTA Button */}
-                <div className='flex gap-4'>
-
+                <div className='flex flex-col sm:flex-row gap-4'>
                     <button 
                         onClick={handleViewWork}
                         className='border border-gray-600 text-gray-300 rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300'
@@ -91,7 +90,7 @@ export const Home = () => {
                     <a
                     href="/Ramshiya_CV.pdf"
                     download="Ramshiya_FullStack_CV.pdf"
-                    className='border text-[black] bg-orange-400 hover:bg-orange-500 border-gray-600  rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300'
+                    className='border text-[black] bg-orange-400 hover:bg-orange-500 border-gray-600  rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300 text-center'
                 >
                     Download CV
                 </a>
@@ -111,9 +110,9 @@ export const Home = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className='w-14 h-14 flex items-center justify-center rounded-2xl 
+                            className='w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-2xl 
                                        backdrop-blur-md bg-white/10 border border-white/20 
-                                       shadow-lg text-gray-400 text-2xl
+                                       shadow-lg text-gray-400 text-xl md:text-2xl
                                        hover:bg-gray-400 hover:text-black hover:scale-110 
                                        transition-all duration-500'
                           >
@@ -123,9 +122,9 @@ export const Home = () => {
                           <button
                             key={index}
                             onClick={item.action}
-                            className='w-14 h-14 flex items-center justify-center rounded-2xl 
+                            className='w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-2xl 
                                        backdrop-blur-md bg-white/10 border border-white/20 
-                                       shadow-lg text-gray-400 text-2xl
+                                       shadow-lg text-gray-400 text-xl md:text-2xl
                                        hover:bg-gray-400 hover:text-black hover:scale-110 
                                        transition-all duration-500 cursor-pointer'
                           >
@@ -137,13 +136,13 @@ export const Home = () => {
             </div>
             
             {/* Image section */}
-            <div className='flex-1 flex justify-center items-center'>
+            <div className='flex-1 flex justify-center items-center mt-10 md:mt-0'>
                 <div className='relative group'>
                     {/* Subtle glow effect */}
-                    <div className='absolute inset-0 rounded-full blur-2xl scale-110 group-hover:scale-125 transition-transform duration-700'></div>
+                    <div className='absolute inset-0 rounded-full blur-xl scale-110 group-hover:scale-125 transition-transform duration-700'></div>
                     <img 
                         src={img} 
-                        className='relative w-[700px] max-w-none opacity-70  transition-all duration-500 ' 
+                        className='relative w-64 h-64 md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] object-cover opacity-90 transition-all duration-500' 
                         alt="Ramshiya - Full Stack Developer" 
                     />
                 </div>

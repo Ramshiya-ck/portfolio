@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // icon library (install if not already: npm install lucide-react)
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,22 +41,22 @@ export const Header = () => {
 
   return (
     <header className="bg-black/90 text-white shadow-md backdrop-blur-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 py-4">
         {/* Logo / Title */}
-        <div className="text-2xl font-semibold tracking-wide hover:text-gray-400 transition duration-300">
+        <div className="text-xl sm:text-2xl font-semibold tracking-wide hover:text-gray-400 transition duration-300">
           Portfolio
         </div>
 
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Navigation Links (Desktop) */}
         <nav className="hidden md:block">
-          <ul className="flex items-center space-x-10 text-sm font-medium">
+          <ul className="flex items-center space-x-6 lg:space-x-10 text-sm font-medium">
             {[
               { label: "Home", sectionId: "home" },
               { label: "About", sectionId: "about" },
@@ -79,7 +79,7 @@ export const Header = () => {
         <div className="hidden md:block">
           <button
             onClick={() => handleNavClick('contact')}
-            className="px-5 py-2 rounded-full bg-gray-500 hover:bg-gray-600 text-black font-semibold transition duration-300 shadow-lg hover:shadow-white-500/30"
+            className="px-4 py-2 rounded-full bg-gray-500 hover:bg-gray-600 text-black font-semibold transition duration-300 shadow-lg hover:shadow-white-500/30 text-sm"
           >
             Contact
           </button>
@@ -97,7 +97,7 @@ export const Header = () => {
               { label: "Skills", sectionId: "skills" },
             ].map((item) => (
               <li key={item.sectionId} onClick={() => handleNavClick(item.sectionId)}>
-                <button className="block cursor-pointer hover:text-gray-400 transition duration-300">
+                <button className="block cursor-pointer hover:text-gray-400 transition duration-300 w-full py-2">
                   {item.label}
                 </button>
               </li>

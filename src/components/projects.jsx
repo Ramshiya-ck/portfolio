@@ -88,7 +88,7 @@ export default function Projects() {
   const activeProject = projectList[activeIndex];
 
   return (
-    <section id="projects" className="relative overflow-hidden bg-[#03060b] py-20 px-6 md:px-16">
+    <section id="projects" className="relative overflow-hidden bg-[#03060b] py-20 px-4 sm:px-6 md:px-8 lg:px-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-20 left-1/2 h-[60vh] w-[60vh] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/20 via-indigo-500/5 to-transparent blur-3xl" />
         <div className="absolute bottom-0 right-0 h-[50vh] w-[40vh] rounded-full bg-gradient-to-br from-purple-500/10 via-fuchsia-500/5 to-transparent blur-3xl" />
@@ -103,7 +103,7 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.5em] text-white/50">Projects</p>
-          <h2 className="text-4xl font-semibold text-white md:text-5xl">Touch-worthy experience carousel</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">Touch-worthy experience carousel</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/70">
             Tap or click a tile to bring it to the front. The info bar refreshes instantly, mirroring the
             premium micro-interactions from your reference inspiration.
@@ -111,7 +111,7 @@ export default function Projects() {
         </motion.header>
 
         <div className="relative">
-          <div className="relative h-[360px] sm:h-[400px] md:h-[460px]">
+          <div className="relative h-[300px] sm:h-[360px] md:h-[400px] lg:h-[460px]">
             <div
               className="absolute inset-0 flex items-center justify-center"
               style={{ perspective: "1600px" }}
@@ -119,10 +119,10 @@ export default function Projects() {
               {projectList.map((project, index) => {
                 const offset = getRelativePosition(index);
                 const depth = Math.abs(offset);
-                const translateX = offset * 170;
-                const translateZ = -depth * 160;
+                const translateX = offset * 140;
+                const translateZ = -depth * 140;
                 const rotateY = offset * -7;
-                const scale = Math.max(1 - depth * 0.08, 0.72);
+                const scale = Math.max(1 - depth * 0.08, 0.65);
                 const isHidden = depth > 2;
 
                 return (
@@ -130,7 +130,7 @@ export default function Projects() {
                     key={project.id}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className="absolute w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px] overflow-hidden rounded-[32px] shadow-2xl shadow-black/60 ring-1 ring-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+                    className="absolute w-[140px] sm:w-[180px] md:w-[220px] lg:w-[260px] h-[180px] sm:h-[240px] md:h-[280px] lg:h-[320px] overflow-hidden rounded-[24px] sm:rounded-[32px] shadow-2xl shadow-black/60 ring-1 ring-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                     style={{
                       transform: `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
                       zIndex: 30 - depth,
@@ -146,9 +146,9 @@ export default function Projects() {
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute bottom-6 left-6 z-20 text-left text-white">
-                      <p className="text-[10px] uppercase tracking-[0.4em] text-white/60">Preview</p>
-                      <h3 className="mt-1 text-2xl font-semibold">{project.title}</h3>
+                    <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 text-left text-white">
+                      <p className="text-[8px] sm:text-[10px] uppercase tracking-[0.4em] text-white/60">Preview</p>
+                      <h3 className="mt-1 text-lg sm:text-2xl font-semibold">{project.title}</h3>
                     </div>
                   </motion.button>
                 );
@@ -164,14 +164,14 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="mx-auto rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-[0_40px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl md:p-10"
+                className="mx-auto rounded-[24px] sm:rounded-[32px] border border-white/10 bg-white/5 p-4 sm:p-6 md:p-8 lg:p-10 shadow-[0_40px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
               >
-                <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
+                <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
                   <div className="flex-1">
-                    <p className="text-[11px] uppercase tracking-[0.45em] text-cyan-200/70">
+                    <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.45em] text-cyan-200/70">
                       Featured Project
                     </p>
-                    <h3 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+                    <h3 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
                       {activeProject.title}
                     </h3>
                     <p className="mt-2 text-sm font-medium tracking-wide text-cyan-100/80">
@@ -185,15 +185,15 @@ export default function Projects() {
                           key={stat.label}
                           className="rounded-2xl border border-white/5 bg-black/40 px-4 py-3 text-white/70"
                         >
-                          <p className="text-[11px] uppercase tracking-wide text-white/50">{stat.label}</p>
-                          <p className="mt-1 text-lg font-semibold text-white">{stat.value}</p>
+                          <p className="text-[10px] sm:text-[11px] uppercase tracking-wide text-white/50">{stat.label}</p>
+                          <p className="mt-1 text-base sm:text-lg font-semibold text-white">{stat.value}</p>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="w-full md:max-w-sm">
-                    <div className="rounded-[28px] border border-white/10 bg-black/40 p-6 shadow-inner shadow-white/5">
+                    <div className="rounded-[20px] sm:rounded-[28px] border border-white/10 bg-black/40 p-4 sm:p-6 shadow-inner shadow-white/5">
                       <h4 className="text-lg font-semibold text-white">Highlights</h4>
                       <ul className="mt-4 space-y-3 text-sm text-white/70">
                         {activeProject.highlights.map((point) => (
@@ -234,14 +234,14 @@ export default function Projects() {
               <button
                 type="button"
                 onClick={() => handleNavigate(-1)}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 text-white transition hover:border-white hover:text-white"
+                className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl border border-white/20 text-white transition hover:border-white hover:text-white"
               >
                 <FiChevronLeft className="text-xl" />
               </button>
               <button
                 type="button"
                 onClick={() => handleNavigate(1)}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 text-white transition hover:border-white hover:text-white"
+                className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl border border-white/20 text-white transition hover:border-white hover:text-white"
               >
                 <FiChevronRight className="text-xl" />
               </button>
@@ -253,8 +253,8 @@ export default function Projects() {
                   key={project.id}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? "w-10 bg-white" : "w-2.5 bg-white/30 hover:bg-white/50"
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === activeIndex ? "w-8 sm:w-10 bg-white" : "w-2 bg-white/30 hover:bg-white/50"
                   }`}
                 />
               ))}
