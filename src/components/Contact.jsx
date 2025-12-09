@@ -17,7 +17,7 @@ export const Contact = () => {
     { icon: <FaGithub />, label: "GitHub", link: "https://github.com" },
     { icon: <FaTwitter />, label: "Twitter", link: "https://twitter.com" },
     { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/ramshy__abdul/?next=%2F" },
-    { icon: <FaWhatsapp />, label: "WhatsApp", link: "https://wa.me/9187143163601?text=Hello%20Ramshiya,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.", type: "link" },
+    { icon: <FaWhatsapp />, label: "WhatsApp", link: "https://wa.me/918714316301?text=Hello%20Ramshiya,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.", type: "link" },
   ];
 
   const handleChange = (e) => {
