@@ -1,20 +1,31 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import img from '/images/ramsiya.jpg'
+import React, { useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
+import img from '/images/ramshiya.png'
 import { FaLinkedinIn, FaGithub, FaTwitter, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import { About } from './about'
 import { Skills } from './Skills'
 import Projects from './projects'
+import { Contact } from './Contact'
 
 export const Home = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleKnowMore = () => {
     navigate('/about');
   };
 
   const handleViewWork = () => {
-    navigate('/projects');
+    const element = document.getElementById('projects');
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const handleEmailClick = () => {
@@ -24,10 +35,30 @@ export const Home = () => {
   const handlePhoneClick = () => {
     window.location.href = 'tel:+918714316363';
   };
+
+  // Scroll to section based on hash in URL
+  useEffect(() => {
+    if (location.hash) {
+      // Wait for content to load
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
     <div className='bg-black h-[93vh] flex items-center relative overflow-hidden'>
-        {/* Subtle background effects */}
+      
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_50%)]'></div>
         
@@ -50,18 +81,20 @@ export const Home = () => {
                 
                 {/* CTA Button */}
                 <div className='flex gap-4'>
-                    <button 
-                        onClick={handleKnowMore}
-                        className='bg-white text-black rounded-full px-8 py-4 font-medium hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl'
-                    >
-                        KNOW MORE
-                    </button>
+
                     <button 
                         onClick={handleViewWork}
                         className='border border-gray-600 text-gray-300 rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300'
                     >
                         VIEW WORK
                     </button>
+                    <a
+                    href="/Ramshiya_CV.pdf"
+                    download="Ramshiya_FullStack_CV.pdf"
+                    className='border text-[black] bg-orange-400 hover:bg-orange-500 border-gray-600  rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300'
+                >
+                    Download CV
+                </a>
                 </div>
 
                 {/* Social Icons (Updated Stats Section) */}
@@ -121,6 +154,7 @@ export const Home = () => {
     <About />
     <Skills />
     <Projects />
+    <Contact />
     </>
   )
 }

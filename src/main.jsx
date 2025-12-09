@@ -5,6 +5,7 @@ import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
+  redirect,
 } from "react-router-dom";
 import { Home } from './components/Home.jsx';
 import { About } from './components/about.jsx';
@@ -21,7 +22,14 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/skills", element: <Skills /> },
       { path: "/projects", element: <Projects /> },
-      { path: "/contact", element: <Contact /> },
+      { 
+        path: "/contact", 
+        loader: () => {
+          // Redirect to home page with hash for contact section
+          return redirect("/#contact");
+        },
+        element: <Home /> 
+      },
     ]
   },
 ]);

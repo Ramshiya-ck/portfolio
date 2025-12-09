@@ -103,7 +103,7 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <button
+          <button 
             onClick={() => handleNavClick('contact')}
             className="mt-4 inline-block px-5 py-2 rounded-full bg-gray-500 hover:bg-gray-600 text-black font-semibold transition duration-300 shadow-lg hover:shadow-white-500/30"
           >

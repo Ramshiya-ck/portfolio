@@ -47,7 +47,7 @@ const projectList = [
   {
     id: "stay",
     title: "StayFinder",
-    stack: "Next.js | TailwindCSS | Prisma | PostgreSQL",
+    stack: "React | TailwindCSS | JavaScript | PostgreSQL",
     description: "A luxury stay discovery experience with cinematic imagery, progressive filtering, and concierge chat baked into the hero area.",
     cover:
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80",

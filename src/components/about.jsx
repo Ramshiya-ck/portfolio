@@ -4,7 +4,13 @@ import img from "/images/About1.png"; // your image path
 export const About = () => {
     return (
         <section id="about" className="bg-black text-white py-20 px-6 md:px-16 flex flex-col md:flex-row items-center gap-12">
-
+            <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-20 left-1/2 h-[60vh] w-[60vh] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/20 via-indigo-500/5 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-[50vh] w-[40vh] rounded-full bg-gradient-to-br from-purple-500/10 via-fuchsia-500/5 to-transparent blur-3xl" />
+      </div><div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-20 left-1/2 h-[60vh] w-[60vh] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/20 via-indigo-500/5 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-[50vh] w-[40vh] rounded-full bg-gradient-to-br from-purple-500/10 via-fuchsia-500/5 to-transparent blur-3xl" />
+      </div>
             {/* Left: Image */}
             <div className="md:w-1/2 flex justify-center">
                 <img
@@ -34,15 +40,6 @@ export const About = () => {
                         </span>
                     ))}
                 </div>
-
-                <a
-                    href="/Ramshiya_CV.pdf"
-                    download="Ramshiya_FullStack_CV.pdf"
-                    className="mt-6 bg-orange-400 text-black font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-orange-500 transition-all duration-300 inline-block"
-                >
-                    Download CV
-                </a>
-
             </div>
         </section>
     );
