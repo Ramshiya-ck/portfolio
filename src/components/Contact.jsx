@@ -17,10 +17,9 @@ export const Contact = () => {
     { icon: <FaGithub />, label: "GitHub", link: "https://github.com" },
     { icon: <FaTwitter />, label: "Twitter", link: "https://twitter.com" },
     { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/ramshy__abdul/?next=%2F" },
-    { icon: <FaWhatsapp />, label: "WhatsApp", link: "https://wa.me/918714316301?text=Hello%20I%20am%20interested%20in%20your%20service", type: "link" },
+    { icon: <FaWhatsapp />, label: "WhatsApp", link: "https://wa.me/918714316301?text=Hello%20I%20am%20interested%20in%20your%20services", type: "link" },
   ];
 
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
