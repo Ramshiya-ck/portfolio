@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
-import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +16,8 @@ export const Contact = () => {
     { icon: <FaLinkedinIn />, label: "LinkedIn", link: "https://linkedin.com" },
     { icon: <FaGithub />, label: "GitHub", link: "https://github.com" },
     { icon: <FaTwitter />, label: "Twitter", link: "https://twitter.com" },
+    { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/ramshy__abdul/?next=%2F" },
+    { icon: <FaWhatsapp />, label: "WhatsApp", action: () => window.open('https://wa.me/9187143163601', '_blank'), type: "button" },
   ];
 
   const handleChange = (e) => {
@@ -188,17 +190,27 @@ export const Contact = () => {
               <p className="mt-3 text-sm text-white/65">
                 Follow the work-in-progress, live prototypes, and weekend experiments.
               </p>
-              <div className="mt-6 flex gap-4">
-                {socials.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 text-xl text-white/70 transition hover:border-white/40 hover:text-white"
-                  >
-                    {item.icon}
-                  </a>
+              <div className="mt-6 flex gap-4 flex-wrap">
+                {socials.map((item, index) => (
+                  item.type === "button" ? (
+                    <button
+                      key={item.label}
+                      onClick={item.action}
+                      className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 text-xl text-white/70 transition hover:border-white/40 hover:text-white"
+                    >
+                      {item.icon}
+                    </button>
+                  ) : (
+                    <a
+                      key={item.label}
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 text-xl text-white/70 transition hover:border-white/40 hover:text-white"
+                    >
+                      {item.icon}
+                    </a>
+                  )
                 ))}
               </div>
             </div>

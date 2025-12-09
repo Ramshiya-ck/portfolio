@@ -135,8 +135,8 @@ export const Home = () => {
                 </div>
             </div>
             
-            {/* Image section */}
-            <div className='flex-1 flex justify-center items-center mt-10 md:mt-0'>
+            {/* Image section - hidden on mobile */}
+            <div className='hidden md:flex flex-1 justify-center items-center mt-10 md:mt-0'>
                 <div className='relative group'>
                     {/* Subtle glow effect */}
                     <div className='absolute inset-0 rounded-full blur-xl scale-110 group-hover:scale-125 transition-transform duration-700'></div>
