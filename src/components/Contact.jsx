@@ -20,6 +20,7 @@ export const Contact = () => {
     { icon: <FaWhatsapp />, label: "WhatsApp", link: "https://wa.me/918714316301?text=Hello%20I%20am%20interested%20in%20your%20service", type: "link" },
   ];
 
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
