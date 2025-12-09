@@ -33,7 +33,7 @@ export const Home = () => {
   };
 
   const handlePhoneClick = () => {
-    window.location.href = 'tel:+918714316363';
+    window.location.href = 'tel:+918714316301';
   };
 
   // Scroll to section based on hash in URL
