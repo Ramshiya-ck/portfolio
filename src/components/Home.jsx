@@ -88,7 +88,7 @@ export const Home = () => {
                         VIEW WORK
                     </button>
                     <a
-                    href="/Ramshiya_CV.pdf"
+                    href="/RAMSHIYA.CV.pdf"
                     download="Ramshiya_FullStack_CV.pdf"
                     className='border text-[black] bg-orange-400 hover:bg-orange-500 border-gray-600  rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300 text-center'
                 >
