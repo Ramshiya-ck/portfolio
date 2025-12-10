@@ -9,31 +9,14 @@
     @apply overflow-x-hidden w-full max-w-full;
   }
   
-  /* Aggressive fix for mobile overflow issues */
+  /* Fix for mobile overflow issues */
   * {
     box-sizing: border-box;
   }
   
   /* Ensure all elements respect the viewport width */
-  #__next, #root, body, html {
+  #__next, #root {
     @apply max-w-full overflow-x-hidden;
-  }
-  
-  /* Prevent any element from causing horizontal overflow */
-  * {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* Specifically target common overflow culprits */
-  img, svg, video, canvas, audio, iframe, embed, object {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* Prevent transform/animation elements from causing overflow */
-  [style*="transform"], [style*="translate"], [style*="scale"] {
-    transform-style: preserve-3d;
   }
 }
 
