@@ -16,6 +16,10 @@ import {
   SiPostman,
   SiVercel,
   SiFastapi,
+  SiDocker,
+  SiRender,
+  SiMongodb,
+  SiFramer,
 } from "react-icons/si";
 
 const skills = [
@@ -24,11 +28,15 @@ const skills = [
   { name: "JavaScript", icon: <FaJs size={40} className="text-yellow-400" /> },
   { name: "React", icon: <FaReact size={40} className="text-blue-400" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={40} className="text-teal-400" /> },
+  { name: "Aceternity UI", icon: <SiFramer size={40} className="text-pink-500" /> },
   { name: "Python", icon: <FaPython size={40} className="text-yellow-500" /> },
   { name: "Django", icon: <SiDjango size={40} className="text-green-700" /> },
   { name: "PostgreSQL", icon: <SiPostgresql size={40} className="text-sky-600" /> },
+  { name: "MongoDB", icon: <SiMongodb size={40} className="text-green-500" /> },
   { name: "REST API", icon: <SiFastapi size={40} className="text-emerald-500" /> },
   { name: "Postman", icon: <SiPostman size={40} className="text-orange-500" /> },
+  { name: "Docker", icon: <SiDocker size={40} className="text-blue-400" /> },
+  { name: "Render", icon: <SiRender size={40} className="text-teal-400" /> },
   { name: "Vercel", icon: <SiVercel size={40} className="text-white" /> },
   { name: "Git", icon: <FaGitAlt size={40} className="text-red-500" /> },
   { name: "GitHub", icon: <FaGithub size={40} className="text-gray-300" /> },
