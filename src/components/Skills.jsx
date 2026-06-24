@@ -20,6 +20,7 @@ import {
   SiRender,
   SiMongodb,
   SiFramer,
+  SiAstro,
 } from "react-icons/si";
 
 const skills = [
@@ -29,6 +30,7 @@ const skills = [
   { name: "React", icon: <FaReact size={40} className="text-blue-400" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={40} className="text-teal-400" /> },
   { name: "Aceternity UI", icon: <SiFramer size={40} className="text-pink-500" /> },
+  { name: "Astro", icon: <SiAstro size={40} className="text-orange-400" /> },
   { name: "Python", icon: <FaPython size={40} className="text-yellow-500" /> },
   { name: "Django", icon: <SiDjango size={40} className="text-green-700" /> },
   { name: "PostgreSQL", icon: <SiPostgresql size={40} className="text-sky-600" /> },
