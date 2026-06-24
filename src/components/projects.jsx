@@ -4,6 +4,26 @@ import { FiArrowUpRight, FiChevronLeft, FiChevronRight, FiGithub } from "react-i
 
 const projectList = [
   {
+    id: "tk-inventory",
+    title: "TK Veg & Fruit Inventory",
+    stack: "Flutter | Dart | Google Sheets API | Firebase",
+    description: "A real-time mobile inventory management application built with Flutter to sync warehouse records, optimize vegetable and fruit search performance, and handle stock logging securely.",
+    cover: "/images/tk_inventory.png",
+    highlights: [
+      "Real-time Google Sheets Sync: Integrated gsheets package with service accounts for instant data logging.",
+      "Single-Read Search Optimization: Cached sheet records in local memory, increasing search speeds by 10x.",
+      "Automated History & Logs: Auto-generates daily spreadsheets for tracking stock variance details (dd/MM/yyyy - S).",
+      "Firebase Admin Console: Restricts app login based on a custom Firestore admin permission whitelist."
+    ],
+    stats: [
+      { label: "Role", value: "Mobile Developer" },
+      { label: "Platform", value: "iOS & Android" },
+      { label: "Status", value: "Production" }
+    ],
+    codeUrl: "https://github.com/Ramshiya-ck/tk_veg_and_fruites",
+    detailsUrl: "https://github.com/Ramshiya-ck/tk_veg_and_fruites"
+  },
+  {
     id: "corpflow",
     title: "CorpFlow",
     stack: "React 19 | Tailwind CSS v4 | Django | PostgreSQL",
