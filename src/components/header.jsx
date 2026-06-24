@@ -40,7 +40,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="bg-black/90 text-white shadow-md backdrop-blur-md sticky top-0 z-50">
+    <header className="bg-neutral-950/70 text-white border-b border-white/5 shadow-lg backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 py-4">
         {/* Logo / Title */}
         <div className="text-xl sm:text-2xl font-semibold tracking-wide hover:text-gray-400 transition duration-300">
@@ -88,7 +88,7 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/95 text-center py-6 space-y-6 transition-all duration-300">
+        <div className="md:hidden bg-neutral-950/85 backdrop-blur-md border-b border-white/5 text-center py-6 space-y-6 transition-all duration-300">
           <ul className="space-y-4 text-lg font-medium">
             {[
               { label: "Home", sectionId: "home" },

@@ -1,5 +1,4 @@
 import React from "react";
-import img from "/images/About1.png"; // your image path
 
 export const About = () => {
     return (
@@ -11,13 +10,17 @@ export const About = () => {
         <div className="absolute -top-20 left-1/2 h-[60vh] w-[60vh] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/20 via-indigo-500/5 to-transparent blur-3xl" />
         <div className="absolute bottom-0 right-0 h-[50vh] w-[40vh] rounded-full bg-gradient-to-br from-purple-500/10 via-fuchsia-500/5 to-transparent blur-3xl" />
       </div>
-            {/* Left: Image */}
+            {/* Left: Circular Image */}
             <div className="md:w-1/2 flex justify-center">
-                <img
-                    src={img}
-                    alt="Profile"
-                    className="rounded-2xl shadow-lg  opacity-65 shadow-gray-800 w-120 h-80 object-cover hover:scale-105 transition-transform duration-500"
-                />
+                <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-white/10 shadow-2xl shadow-black/80 group">
+                    <img
+                        src="/images/profile.JPG"
+                        alt="Profile"
+                        className="w-full h-full object-cover object-[center_17%] scale-110 group-hover:scale-120 transition-transform duration-750 ease-out"
+                    />
+                    {/* Light black blend overlay */}
+                    <div className="absolute inset-0 bg-black/25 mix-blend-multiply pointer-events-none group-hover:bg-black/10 transition-colors duration-500"></div>
+                </div>
             </div>
 
             {/* Right: Content */}

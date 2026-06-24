@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import img from '/images/ramshiya.png'
 import { FaLinkedinIn, FaGithub, FaTwitter, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import { About } from './about'
 import { Skills } from './Skills'
@@ -57,16 +56,21 @@ export const Home = () => {
 
   return (
     <>
-    <div className='bg-black min-h-screen flex items-center relative overflow-hidden'>
+    <div 
+      className='min-h-screen flex items-center relative overflow-hidden bg-cover bg-center'
+      style={{ backgroundImage: `url('/images/background.jpg')` }}
+    >
+        {/* Dark overlay to make text highly readable */}
+        <div className='absolute inset-0 bg-black/75 backdrop-blur-[1px] z-0'></div>
       
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_50%)]'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.15),transparent_50%)] z-0'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.05),transparent_50%)] z-0'></div>
         
-        <div className='flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-10 relative z-10 py-12 md:py-0'>
-            <div className='flex-1 max-w-2xl md:py-16'>
+        <div className='flex flex-col md:flex-row md:justify-end items-center w-full px-6 md:px-10 relative z-10 py-16 md:py-0 gap-10 md:gap-4'>
+            <div className='flex-1 max-w-2xl md:py-16 md:ml-auto'>
                 {/* Greeting */}
                 <div className='mb-8'>
-                    <span className='text-gray-500 text-sm font-light tracking-[0.2em] uppercase'>Welcome to my world</span>
+                    <span className='text-gray-400 text-sm font-light tracking-[0.2em] uppercase'>Welcome to my world</span>
                 </div>
                 
                 {/* Main heading */}
@@ -90,13 +94,13 @@ export const Home = () => {
                     <a
                     href="/RAMSHIYA.CV.pdf"
                     download="Ramshiya_FullStack_CV.pdf"
-                    className='border text-[black] bg-orange-400 hover:bg-orange-500 border-gray-600  rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300 text-center'
+                    className='border text-[black] bg-orange-400 hover:bg-orange-500 border-gray-600 rounded-full px-8 py-4 font-medium hover:border-white hover:text-white transition-all duration-300 text-center'
                 >
                     Download CV
                 </a>
                 </div>
 
-                {/* Social Icons (Updated Stats Section) */}
+                {/* Social Icons */}
                 <div className='flex gap-5 mt-10 justify-start'>
                     {[ 
                         { icon: <FaLinkedinIn />, link: "https://linkedin.com/in/ramshiya-ck", type: "link" },
@@ -132,19 +136,6 @@ export const Home = () => {
                           </button>
                         )
                     ))}
-                </div>
-            </div>
-            
-            {/* Image section - hidden on mobile */}
-            <div className='hidden md:flex flex-1 justify-center items-center mt-10 md:mt-0'>
-                <div className='relative group'>
-                    {/* Subtle glow effect */}
-                    <div className='absolute inset-0 rounded-full blur-xl scale-110 group-hover:scale-125 transition-transform duration-700'></div>
-                    <img 
-                        src={img} 
-                        className='relative w-64 h-64 md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] object-cover opacity-90 transition-all duration-500' 
-                        alt="Ramshiya - Full Stack Developer" 
-                    />
                 </div>
             </div>
         </div>

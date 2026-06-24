@@ -4,6 +4,25 @@ import { FiArrowUpRight, FiChevronLeft, FiChevronRight, FiGithub } from "react-i
 
 const projectList = [
   {
+    id: "staffmint",
+    title: "StaffMint AI",
+    stack: "React | Django | WebSockets | Pinecone | OpenAI | Celery",
+    description: "A cutting-edge platform enabling businesses to deploy 24/7 AI-powered digital staff capable of natural chat and voice conversations to reduce support overhead.",
+    cover: "/images/staffmint.png",
+    highlights: [
+      "AI Receptionist: Processed documents into Pinecone vector embeddings for semantic QA search.",
+      "Real-time pipeline co-designed using Django Channels (WebSockets) and Redis for response streaming.",
+      "Voice Mode with OpenAI Whisper (Speech-to-Text) and ElevenLabs (Text-to-Speech) integrations."
+    ],
+    stats: [
+      { label: "Role", value: "Fullstack & AI Developer" },
+      { label: "Platform", value: "Responsive Web / Widget" },
+      { label: "Status", value: "Repository" }
+    ],
+    codeUrl: "https://github.com/Ramshiya-ck/staffmint",
+    detailsUrl: "https://github.com/Ramshiya-ck/staffmint"
+  },
+  {
     id: "car-rental",
     title: "Car Rental",
     stack: "React | TailwindCSS | Vite",
