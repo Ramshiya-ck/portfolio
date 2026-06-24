@@ -4,6 +4,25 @@ import { FiArrowUpRight, FiChevronLeft, FiChevronRight, FiGithub } from "react-i
 
 const projectList = [
   {
+    id: "corpflow",
+    title: "CorpFlow",
+    stack: "React 19 | Tailwind CSS v4 | Django | PostgreSQL",
+    description: "A secure, role-based workflow automation system designed to streamline request submissions and multi-stage approval processes across multiple corporate departments.",
+    cover: "/images/corpflow.png",
+    highlights: [
+      "Role-Based Access Control: Defined granular roles (Admin, Manager, Employee, HR, Finance, IT).",
+      "Dynamic Multi-Step Approval: Automated request routing from one level to the next.",
+      "Smart Request & Audit Logs: Dynamic JSON metadata, document attachments, and full audit logs."
+    ],
+    stats: [
+      { label: "Role", value: "Fullstack Developer" },
+      { label: "Platform", value: "Responsive Web" },
+      { label: "Status", value: "Repository" }
+    ],
+    codeUrl: "https://github.com/Ramshiya-ck/CropFlow",
+    detailsUrl: "https://github.com/Ramshiya-ck/CropFlow"
+  },
+  {
     id: "staffmint",
     title: "StaffMint AI",
     stack: "React | Django | WebSockets | Pinecone | OpenAI | Celery",
